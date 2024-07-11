@@ -3,8 +3,8 @@ import "../styles/globals.css";
 import Footer from "../../components/Footer";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <SessionProvider session={pageProps.session}>
+  const session = pageProps && pageProps.session;  return (
+    <SessionProvider session={session}>
       <div className="min-h-screen flex flex-col">
         <main className="flex-grow">
           <Component {...pageProps} />
